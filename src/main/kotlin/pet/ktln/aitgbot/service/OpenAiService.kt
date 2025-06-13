@@ -15,7 +15,7 @@ class OpenAiService(private val chatModel: OpenAiChatModel) {
             messages,
             OpenAiChatOptions.builder()
                 .temperature(0.0)
-                .model(OpenAiApi.ChatModel.CHATGPT_4_O_LATEST)
+                .model(OpenAiApi.ChatModel.GPT_4_O)
                 .responseFormat(ResponseFormat.builder().type(ResponseFormat.Type.TEXT).build())
                 .build()))
             .results?.map { it.output.text ?: ""} ?: emptyList()
